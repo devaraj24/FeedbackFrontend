@@ -1,0 +1,36 @@
+<h2>Patient List</h2>
+<table class="table table-stiped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Patient Name</th>
+            <th>Mobile Number </th>
+            <th>Email </th>
+            <th>BloodGroup</th>
+            <th>Age </th>
+            <th>Address</th>
+            <th>Add Feedback</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let patient of patients">
+            <td>{{patient.id}}</td>
+            <td>{{patient.patientName}}</td>
+            <td>{{patient.mobileNo}}</td>
+            <td>{{patient.email}}</td>
+            <td>{{patient.bloodGroup}}</td>
+            <td>{{patient.age}}</td>
+            <td>{{patient.address}}</td>
+         
+
+            <td>
+
+            <button type="button" class="btn btn-outline-info btn-sm" routerLink="/addfeedback/{{patient.id}}">Add
+                Feedback</button>
+            </td>
+
+
+        </tr>
+    </tbody>
+</table>
+<router-outlet></router-outlet>
