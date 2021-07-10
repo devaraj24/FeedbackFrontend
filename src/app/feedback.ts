@@ -7,8 +7,8 @@ export class Feedback {
     feedbackId: number =0;
     rating:number | undefined;
     feedbackComment:String | undefined;
-      patient:Patient= new Patient();
-      doctor:Doctor =new Doctor;
+    patient:Patient =new Patient;
+    doctor: Doctor= new Doctor();
 
 }
 

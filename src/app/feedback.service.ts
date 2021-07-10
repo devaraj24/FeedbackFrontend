@@ -8,9 +8,12 @@ import { Doctor } from './doctor';
   providedIn: 'root'
 })
 export class FeedbackService {
-  addFeedback(feedback: Feedback) {
-    throw new Error('Method not implemented.');
-  }
+  // getFeedbackListByDoctor(doctorId: number) {
+  //   throw new Error('Method not implemented.');
+  // }
+  // addFeedback(feedback: Feedback) {
+  //   throw new Error('Method not implemented.');
+  // }
 
   private baseURL = 'http://localhost:8082/feedback/';
 
@@ -22,16 +25,20 @@ export class FeedbackService {
   }
 
   addfeedback(feedback: Feedback): Observable<Object> {
-  return this.httpClient.post(`${this.baseURL}` + 'saveFeedback', feedback);
+  return this.httpClient.post(`${this.baseURL}` + '/saveFeedback', feedback);
   }
  
   getFeedbackList(): Observable<Feedback[]> {
-    return this.httpClient.get<Feedback[]>(`${this.baseURL}` + 'fetchAllFeedbacks');
+    return this.httpClient.get<Feedback[]>(`${this.baseURL}` + '/fetchAllFeedbacks');
   }
 
-getFeedbackById(feedbackId:number): Observable<Feedback> {
-  console.log(`${this.baseURL}`+`getById/${feedbackId}`);
-  return this.httpClient.get<Feedback>(`${this.baseURL}`+`getfeedbackbyId/${feedbackId}`)
-}
+
+  getFeedbackListByDoctor(doctorId:number):Observable<Feedback[]>{
+    return this.httpClient.get<Feedback[]>(`${this.baseURL}`+`getFeedbackListByDoctor/${doctorId}`)
+  }
+// getFeedbackById(feedbackId:number): Observable<Feedback> {
+//   console.log(`${this.baseURL}`+`getById/${feedbackId}`);
+//   return this.httpClient.get<Feedback>(`${this.baseURL}`+`getfeedbackbyId/${feedbackId}`)
+// }
 }
 

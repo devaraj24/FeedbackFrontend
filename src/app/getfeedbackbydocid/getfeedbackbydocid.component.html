@@ -1,0 +1,54 @@
+<div style="text-align: center">
+    <h1>Get Feedback List</h1>
+    <h3>Enter your id:</h3>
+    <input #id type="number" name="id">
+    <button class="btn btn-info btn-sm" type="submit" (click)="getFeedbackListByDoctor()">Get Feedbacks List</button>
+    <br>
+ 
+    <!-- <div [style.display]="doctor.doctorId ? 'block': 'none'"> -->
+        <table class="table table-stiped">
+            <thead>
+                <tr>
+                    <th>feedback Id</th>
+                    <th>Feedback Rating</th>
+                    <th>Feedback Comment</th>
+                    <th>Patient Name</th>
+ 
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let feedback of feedbacks">
+                    <td>{{feedback.feedbackId}}</td>
+                    <td>{{feedback.rating}}</td>
+                    <td>{{feedback.feedbackComment}}</td>
+                    <td>{{feedback.patient.patientName}}</td>
+                    <!-- <td>{{appointment.patient.mobileNo}}</td>
+                    <td>{{appointment.patient.email}}</td> -->
+ 
+                    <!-- <td *ngFor="let patients of patients">
+                        {{patients.patientName}}
+                    </td> -->
+ 
+                    <!-- 
+                   <td *ngFor="let patient of appointment.patients">{{patient.mobileNo}}</td>
+                   <td *ngFor="let patient of appointment.patients">{{patient.email}}</td>
+                   <td *ngFor="let patient of appointments.patients">{{patient.bloodgroup}}</td>
+                   <td *ngFor="let patient of appointments.patients">{{patient.age}}</td>
+                    <td *ngFor="let patient of appointments.patients">{{patient.address}}</td> -->
+                    <!-- <td>
+                        <button type="button" class="btn btn-outline-info btn-sm"
+                            routerLink="/updateAppointment/{{appointment.appointmentId}}">
+                            Update Details</button>
+                    </td> -->
+ 
+                </tr>
+            </tbody>
+        </table>
+        <!-- <h1 >Details of Appointment {{patient.id}}</h1>
+     <h3 >Patient Name: {{patient.patientName}}</h3>
+     <h3 >Mobile Number: {{patient.mobileNo}}</h3>
+     <h3 >Email: {{patient.email}}</h3>
+     <h3 >BloodGroup: {{patient.bloodGroup}}</h3>
+     <h3>Age:{{patient.age}}</h3>
+     <h3>Address:{{patient.address}}</h3> -->
+    </div>

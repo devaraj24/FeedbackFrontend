@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 // import { DoctorListComponent } from './doctor-list/doctor-list.component';
 // import { ViewfeedbackbydocidComponent } from './viewfeedbackbydocid/viewfeedbackbydocid.component';
 // import { GetbyidComponent } from './getfeedbackbyid/getbyid.component';
-import { GetfeedbackbyidComponent } from './getfeedbackbyid/getfeedbackbyid.component';
+import { GetfeedbackbydocidComponent } from './getfeedbackbydocid/getfeedbackbydocid.component';
 import { AddfeedbackComponent } from './addfeedback/addfeedback.component';
 import { PatientListComponent } from './patientlist/patientlist.component';
 
@@ -18,10 +18,7 @@ import { PatientListComponent } from './patientlist/patientlist.component';
     AppComponent,
     FeedbacklistComponent,
     AddfeedbackComponent,
-    // DoctorListComponent,
-    // ViewfeedbackbydocidComponent,
-    // GetbyidComponent,
-    GetfeedbackbyidComponent,
+    GetfeedbackbydocidComponent,
     PatientListComponent
   ],
   imports: [

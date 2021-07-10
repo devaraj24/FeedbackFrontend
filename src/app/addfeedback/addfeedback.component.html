@@ -1,5 +1,16 @@
 <h2>Add Feedback</h2>
-<form (ngSubmit) ="onSubmit()">
+<form  (ngSubmit)="Onsubmit(speciality.value)" >
+
+  <select class="form-group" aria-label="Default select example" #speciality>
+    <option selected value="default">Open this select menu</option>
+    
+    <option value="neuro">nuero</option>
+    
+    <option value="surgeon">surgeon</option>
+    
+    <!-- <option value="ENT">ENT</option> -->
+    
+    </select>
 
   <div class="form-group">
     <label>Patient Name</label>

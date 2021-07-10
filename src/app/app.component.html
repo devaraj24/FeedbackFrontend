@@ -1,20 +1,15 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-              <a routerLink="/feedback" routerLinkActive="active" class="nav-link">FeedbackList</a> <br>
-            </li>
-          </ul>
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a routerLink="/getfbbyid" routerLinkActive="active" class="nav-link">Find Feedback by id</a> <br>
-            </li>
-          </ul>
-          <ul class="navbar-nav">
-            <li class="nav-item">
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="navbar-nav">
+              <a routerLink="feedback" routerLinkActive="active" class="nav-link">FeedbackList</a> <br>
+      
+              <a routerLink="getFeedbackListByDoctorId" routerLinkActive="active" class="nav-link">Find Feedback by Doctor id</a> <br>
+"/
               <a routerLink="/patientList" routerLinkActive="active" class="nav-link">Get patientList</a> <br>
-            </li>
-          </ul>
+         
+        </div>
     </nav>
+
+    <button type="button" class="btn btn-danger btn-sm" routerLink="/getFeedbackListByDoctorId">feedbackbydoctorid</button>
     <br>
     <div class="container">
         <router-outlet></router-outlet>

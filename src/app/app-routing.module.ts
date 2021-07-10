@@ -8,7 +8,7 @@ import { AddfeedbackComponent } from './addfeedback/addfeedback.component';
 //import { GetallFeedbacksComponent } from './getallfeedbacks/getall-feedbacks.component';
 import { Feedback } from './feedback';
 import { FeedbacklistComponent } from './feedbacklist/feedbacklist.component';
-import { GetfeedbackbyidComponent } from './getfeedbackbyid/getfeedbackbyid.component';
+import { GetfeedbackbydocidComponent } from './getfeedbackbydocid/getfeedbackbydocid.component';
 import { PatientListComponent } from './patientlist/patientlist.component';
 //import { ViewfeedbackbydocidComponent } from './viewfeedbackbydocid/viewfeedbackbydocid.component';
 const routes: Routes = [
@@ -16,10 +16,9 @@ const routes: Routes = [
   { path: 'feedback', component: FeedbacklistComponent },
   { path: '', redirectTo: 'feedback', pathMatch: 'full' },
   { path: 'addfeedback/:id',component:AddfeedbackComponent },
-  // { path: 'getDoctorList', component: DoctorListComponent },
-  // { path: 'doctor-details/:feedbackId', component:ViewfeedbackbydocidComponent }
- { path: 'getfbbyid', component:GetfeedbackbyidComponent},
- { path:'patientList',component:PatientListComponent}
+  {path:'getFeedbackListByDoctorId',component:GetfeedbackbydocidComponent},
+ { path:'patientList',component:PatientListComponent},
+ 
  
 ];
 @NgModule({

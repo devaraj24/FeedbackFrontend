@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GetfeedbackbyidComponent } from './getfeedbackbyid.component';
+import { GetfeedbackbyidComponent } from './getfeedbackbydocid.component';
 
 describe('GetfeedbackbyidComponent', () => {
   let component: GetfeedbackbyidComponent;
